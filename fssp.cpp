@@ -51,15 +51,17 @@ void search(string path){
 		if(strcmp(pathc,"/var/run")==0)continue;
 		if(strcmp(pathc,"/var/shm")==0)continue;
 		if(strcmp(pathc,"/var/tmp")==0)continue;
-		if(strcmp(pathc,"/home/korsic/trenut")==0)continue;
-		if(strcmp(pathc,"/home/korsic/chromium/cache")==0)continue;
-		if(strcmp(pathc,"/home/korsic/.cache/pikaur")==0)continue;
-		if(strcmp(pathc,"/home/korsic/.local/share/pikaur/aur_repos")==0)continue;
+		// insert your user name in place of <USER>
+		if(strcmp(pathc,"/home/<USER>/trenut")==0)continue;
+		if(strcmp(pathc,"/home/<USER>/chromium/cache")==0)continue;
+		if(strcmp(pathc,"/home/<USER>/.cache/pikaur")==0)continue;
+		if(strcmp(pathc,"/home/<USER>/.local/share/pikaur/aur_repos")==0)continue;
 		/* ostaje samo:
 		* etc
 		* home
 		* usr
 		* var
+		* root
 		*/
 		bool fu=false;
 		if(owned.find(pathc)==owned.end()){
